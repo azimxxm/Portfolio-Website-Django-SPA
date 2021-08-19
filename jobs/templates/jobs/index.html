@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Mystery Code - Blog</title>
+    <title>My Portfolio website - My Blog</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -30,100 +30,106 @@
 
 <body>
 
-    <!-- ======= Mobile nav toggle button ======= -->
-    <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+    <div id="home">
+        <!-- ======= Mobile nav toggle button ======= -->
+        <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
 
-    <!-- ======= Header ======= -->
-    <header id="header">
-        <div class="d-flex flex-column">
+        <!-- ======= Header ======= -->
+        <header id="header">
+            <div class="d-flex flex-column">
 
-            <div class="profile">
-                <img src="{% static 'img/azimjon.jpg' %}" alt="profile-img.jpg" class="img-fluid rounded-circle">
-                <h1 class="text-light"><a href="{% url 'index' %}">Azimjon Abdurasulov</a></h1>
-                <div class="social-links mt-3 text-center">
-                    <a href="https://www.facebook.com/azimbekabdurasulov/" target="_blank" class="facebook"><i
-                            class="bx bxl-facebook"></i></a>
-                    <a href="https://www.instagram.com/azim_29_01/" target="_blank" class="instagram"><i
-                            class="bx bxl-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/azimjon-abdurasulov-aa10671b3/" target="_blank"
-                        class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                    <a href="https://github.com/azimxxm" target="_blank" class="github"><i
-                            class="bx bxl-github"></i></a>
-                    <a href="https://t.me/azim_01_29" target="_blank" class="telegram"><i
-                            class="bx bxl-telegram"></i></a>
+                <div class="profile">
+                    <img src="{% static 'img/azimjon.jpg' %}" alt="profile-img.jpg" class="img-fluid rounded-circle">
+                    <h1 class="text-light"><a href="{% url 'index' %}">Azimjon Abdurasulov</a></h1>
+                    <div class="social-links mt-3 text-center">
+                        <a href="https://www.facebook.com/azimbekabdurasulov/" target="_blank" class="facebook"><i
+                                class="bx bxl-facebook"></i></a>
+                        <a href="https://www.instagram.com/azim_29_01/" target="_blank" class="instagram"><i
+                                class="bx bxl-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/azimjon-abdurasulov-aa10671b3/" target="_blank"
+                            class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        <a href="https://github.com/azimxxm" target="_blank" class="github"><i
+                                class="bx bxl-github"></i></a>
+                        <a href="https://t.me/azim_01_29" target="_blank" class="telegram"><i
+                                class="bx bxl-telegram"></i></a>
+                    </div>
                 </div>
+
+                <nav class="nav-menu">
+                    <ul>
+                        <li class="active"><a href="#home"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                        <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+                        <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+                        <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
+                        <li><a href="#services"><i class="bx bx-server"></i> Services</a></li>
+                        <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
+
+                    </ul>
+                </nav><!-- .nav-menu -->
+                <button type="button" class="mobile-nav-toggle d-xl-none"><i
+                        class="icofont-navigation-menu"></i></button>
+
             </div>
+        </header><!-- End Header -->
 
-            <nav class="nav-menu">
-                <ul>
-                    <li class="active"><a href="{% url 'index' %}"><i class="bx bx-home"></i> <span>Home</span></a></li>
-                    <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-                    <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-                    <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
-                    <li><a href="#services"><i class="bx bx-server"></i> Services</a></li>
-                    <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
-
-                </ul>
-            </nav><!-- .nav-menu -->
-            <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
-
-        </div>
-    </header><!-- End Header -->
-
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-        <div class="hero-container" data-aos="fade-in">
-            <h1>Azimjon Abdurasulov</h1>
-            <p>I'm <span class="typed"
-                    data-typed-items="Django Developer, Python Developer, Telegram bot Developer,  Freelancer, Photographer"></span>
-            </p>
-        </div>
-    </section><!-- End Hero -->
+        <!-- ======= Hero Section ======= -->
+        <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="hero-container" data-aos="fade-in">
+                <h1>Azimjon Abdurasulov</h1>
+                <p>I'm <span class="typed"
+                        data-typed-items="Django Developer, Python Developer, Telegram bot Developer,  Freelancer, Photographer"></span>
+                </p>
+            </div>
+        </section><!-- End Hero -->
+    </div>
 
     <main id="main">
 
         <!-- ======= About Section ======= -->
         <section id="about" class="about">
             <div class="container">
-
+                {% for about in about%}
                 <div class="section-title">
                     <h2>About</h2>
-                    <p> Hi, my brief description. I graduated from college in 2018 and went to the army for 1 year. I
-                        came from the army and started learning programming. Now I know HTML, CSS, JavaScript,
-                        Bootstrap, Python, Djengo and Git. I can also work with the Telegram bot api.</p>
+                    <p> {{ about.description }} </p>
                 </div>
 
                 <div class="row">
                     <div class="col-lg-4" data-aos="fade-right">
-                        <img src="{% static 'img/about.jpg' %}" class="img-fluid" alt="about.jpg">
+                        <img src="{{ about.image.url }}" class="img-fluid" alt="about.jpg">
                     </div>
                     <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                        <h3>IT specialist &amp; Web Developer.</h3>
-                        <p class="font-italic">
-                            With my vast experience and knowledge in this field, I can say that I have realized that the
-                            IT industry requires a lot of study and effort.
-                        </p>
+                        <h3> {{ about.work_type }} </h3>
+                        <p class="font-italic"> {{ about.info_work }} </p>
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul>
-                                    <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> 29 January 1999
+                                    <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong>
+                                        {{about.birthday }} </li>
+                                    <li><i class="icofont-rounded-right"></i> <strong>Website:</strong>
+                                       <a href=" {{about.website}} " target="_blank"> Clik me </a> </li>
+                                    <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> {{ about.phone }}
                                     </li>
-                                    <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> www.example.com
+                                    <li><i class="icofont-rounded-right"></i> <strong>City:</strong> {{ about.city }}
                                     </li>
-                                    <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> +9989 99 409 01 29
-                                    </li>
-                                    <li><i class="icofont-rounded-right"></i> <strong>City:</strong> Tashkent Region
-                                        Yangiyul City</li>
                                 </ul>
                             </div>
                             <div class="col-lg-6">
                                 <ul>
-                                    <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> 22</li>
-                                    <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> Junior</li>
-                                    <li><i
-                                            class="icofont-rounded-right"></i><strong>PhEmailone:</strong>www.azim777.com#gmail.com
+                                    <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> {{ about.age }}
                                     </li>
+                                    <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> {{ about.degree}}
+                                    </li>
+                                    <li><i class="icofont-rounded-right"></i><strong>Emil:</strong> {{ about.emil }}
+                                    </li>
+                                    {% if about.freelance == True %}
                                     <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li>
+                                    {% endif %}
+                                    {% if about.freelance == False %}
+                                    <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Not available
+                                    </li>
+                                    {% endif %}
+
                                 </ul>
                             </div>
                         </div>
@@ -134,7 +140,7 @@
                         </p>
                     </div>
                 </div>
-
+                {% endfor %}
             </div>
         </section><!-- End About Section -->
 
@@ -382,51 +388,31 @@
 
                 <div class="section-title">
                     <h2>Portfolio</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    {% for info in portfolio %}
+                    <p> {{ info.info }} </p>
+                    {% endfor %}
                 </div>
 
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
 
+                    {% for portfolio in portfolio %}
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="{% static 'img/portfolio/sirojweb.jpg' %}" class="img-fluid" alt="">
+                            <img src="{{ portfolio.image.url }}" class="img-fluid" alt="">
                             <div class="portfolio-links">
-                                <a href="{% static 'img/portfolio/sirojweb.jpg' %}" data-gall="portfolioGallery"
+                                <a href="{{ portfolio.image.url }}" data-gall="portfolioGallery"
                                     class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
-                                <a href="https://photolife2.netlify.app/" target="_blank" title="More Details"><i
+                                <a href="{{ portfolio.url }}" target="_blank" title="More Details"><i
                                         class="bx bx-link"></i></a>
                             </div>
-                            <h4 style="padding: 10px; text-align: center;">ProMX website</h4>
+                            <h4 style="padding: 10px; text-align: center;">{{ portfolio.title }}</h4>
                         </div>
                     </div>
+                    {% endfor %}
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{% static 'img/portfolio/shoxmakonweb.jpg' %}" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="{% static 'img/portfolio/shoxmakonweb.jpg' %}" data-gall="portfolioGallery"
-                                    class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
-                                <a href="http://azimjondeveloper.pythonanywhere.com/" target="_blank"
-                                    title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                            <h4 style="padding: 10px; text-align: center;">Shoxmakon Restauran website</h4>
-                        </div>
-                    </div>
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                        <div class="portfolio-wrap">
-                            <img src="{% static 'img/portfolio/shoxmakonbot.jpg' %}" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                                <a href="{% static 'img/portfolio/shoxmakonbot.jpg' %}" data-gall="portfolioGallery"
-                                    class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
-                                <a href="https://t.me/Restauran_sen_message_bot" target="_blank" title="More Details"><i
-                                        class="bx bx-link"></i></a>
-                            </div>
-                            <h4 style="padding: 10px; text-align: center;">Shoxmakon Telegram bot</h4>
-                        </div>
-                    </div>
+
+
 
                 </div>
 
@@ -526,7 +512,8 @@
                     </div>
 
                     <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <form action="{% url 'index' %}" method="POST" role="form" class="php-email-form">
+                            {% csrf_token %}
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="name">First name</label>
@@ -542,7 +529,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="name">Phone</label>
-                                    <input type="number" class="form-control" name="phone" id="phone"
+                                    <input type="number" class="form-control" name="phoneNumber" id="phone"
                                         data-rule="phone" />
                                 </div>
                                 <div class="form-group col-md-6">
