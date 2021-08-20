@@ -5,6 +5,7 @@ from .forms import *
 def index(request):
     about = About.objects.all()
     portfolio = Portfolio.objects.all()
+    certificat = Certificate.objects.all()
     form = ContactForm
     if request.method == "POST":
         form = ContactForm(request.POST)
@@ -14,6 +15,7 @@ def index(request):
     context = {
         'about':about,
         'portfolio':portfolio,
+        'certificat':certificat,
     }
     return render(request, 'jobs/index.html', context)
 

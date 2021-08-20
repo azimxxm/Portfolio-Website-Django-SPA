@@ -107,7 +107,8 @@
                                     <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong>
                                         {{about.birthday }} </li>
                                     <li><i class="icofont-rounded-right"></i> <strong>Website:</strong>
-                                       <a href=" {{about.website}} " target="_blank"> Clik me </a> </li>
+                                        <a href=" {{about.website}} " target="_blank"> Clik me </a>
+                                    </li>
                                     <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> {{ about.phone }}
                                     </li>
                                     <li><i class="icofont-rounded-right"></i> <strong>City:</strong> {{ about.city }}
@@ -400,8 +401,8 @@
                         <div class="portfolio-wrap">
                             <img src="{{ portfolio.image.url }}" class="img-fluid" alt="">
                             <div class="portfolio-links">
-                                <a href="{{ portfolio.image.url }}" data-gall="portfolioGallery"
-                                    class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
+                                <a href="{{ portfolio.image.url }}" data-gall="portfolioGallery" class="venobox"
+                                    title="App 1"><i class="bx bx-plus"></i></a>
                                 <a href="{{ portfolio.url }}" target="_blank" title="More Details"><i
                                         class="bx bx-link"></i></a>
                             </div>
@@ -418,6 +419,45 @@
 
             </div>
         </section><!-- End Portfolio Section -->
+
+
+
+        <!-- ======= Certificate Section ======= -->
+        <section id="portfolio" class="portfolio section-bg">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>My Certificate</h2>
+                    {% for certificat in certificat %}
+                    <p> {{ certificat.info }} </p>
+                    {% endfor %}
+                </div>
+
+                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
+
+                    {% for certificat in certificat %}
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-wrap">
+                            <img src="{{ certificat.image.url }}" class="img-fluid" alt="">
+                            <div class="portfolio-links">
+                                <a href="{{ certificat.image.url }}" data-gall="portfolioGallery" class="venobox"
+                                    title="App 1"><i class="bx bx-plus"></i></a>
+                                <a href="{{ certificat.course }}" target="_blank" title="More Details"><i
+                                        class="bx bx-link"></i></a>
+                            </div>
+                            <h4 style="padding: 10px; text-align: center;">{{ portfolio.title }}</h4>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+
+
+
+
+                </div>
+
+            </div>
+        </section><!-- End Certificate Section -->
 
         <!-- ======= Services Section ======= -->
         <section id="services" class="services">

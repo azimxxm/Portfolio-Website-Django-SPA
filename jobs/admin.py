@@ -11,6 +11,10 @@ class AboutAdmin(admin.ModelAdmin):
 class PortfolioAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'image', 'url', 'date_created']
 
+@admin.register(Certificate)
+class CertificateAdmin(admin.ModelAdmin):
+    list_display = ['id', 'title', 'image', 'course', 'date_created']
+
 @admin.register(Contact)
 class ContactAdmin(admin.ModelAdmin):
     list_display = ['id', 'firstName', 'lastName', 'phoneNumber', 'email', 'message']

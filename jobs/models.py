@@ -42,6 +42,14 @@ class Portfolio(models.Model):
     def __str__(self):
         return self.title
 
+
+class Certificate(models.Model):
+    title = models.CharField(max_length=40)
+    info = models.TextField(max_length=300, blank=True)
+    image = models.ImageField(upload_to='Certificate/')
+    course = models.URLField()
+    date_created = models.DateTimeField(auto_now_add=True)
+
 class Contact(models.Model):
     firstName = models.CharField(max_length=50)
     lastName = models.CharField(max_length=50)
