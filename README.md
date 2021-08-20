@@ -3,7 +3,7 @@
 
 https://azimjon-portfolio.herokuapp.com
 
-#Home page
+# Home page
 ![home](https://user-images.githubusercontent.com/76002783/130265129-e2f90627-c004-4e2b-a5d1-7a3b539f2b6d.jpg)
 
 # About page
